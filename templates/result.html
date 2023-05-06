@@ -1,0 +1,39 @@
+{% load  static %}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>TEXT SUMMARIZATION</title>
+<link rel="stylesheet" type="text/css" href="{% static 'style/style.css'%}" title="style" />
+</head>
+
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logo">
+				<div id="logo_text">
+					<!-- class="logo_colour", allows you to change the colour of the text -->
+					<h3>
+						<a href="#"><font color="white">Multi Document Text Summarization</font></a>
+					</h3>
+					<br/><br/>
+				</div>
+			</div>
+			<div id="menubar">
+				<ul id="menu">
+
+					<li><a href="/index">Upload Document</a></li>
+					<li><a href="/viewdocuments">Documents</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<div id="content_header"></div>
+		<div id="site_content">
+			<div id="content" style="width: 900px" >
+				<h1 align="justify">{{message}}</h1>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

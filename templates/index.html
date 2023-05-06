@@ -1,0 +1,56 @@
+{% load  static%}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>TEXT SUMMARIZATION</title>
+<link rel="stylesheet" type="text/css" href="{% static 'style/style.css'%}" title="style" />
+</head>
+
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logo">
+				<div id="logo_text">
+					<!-- class="logo_colour", allows you to change the colour of the text -->
+					<h3>
+						<a href="#"><font color="white">Multi Document Text Summarization</font></a>
+					</h3>
+					<br/><br/>
+				</div>
+			</div>
+			<div id="menubar">
+				<ul id="menu">
+				
+					<li><a href="/index">Upload Document</a></li>
+					<li><a href="/viewdocuments">Documents</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<div id="content_header"></div>
+		<div id="site_content">
+			<div id="content">
+				
+				<h1>{{message}}</h1>
+
+				<form name="form" action="/uploaddocument/" enctype="multipart/form-data" method="post">
+					{% csrf_token %}
+					<div class="form_settings">
+						
+						<p>
+							<span>Choose File:</span><input class="contact" type="file"
+								name="document" required/>
+						</p>
+						<p style="padding-top: 15px">
+							<span>&nbsp;</span><input class="submit" type="submit"
+								name="contact_submitted" value="Upload" />
+						</p>
+					</div>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
